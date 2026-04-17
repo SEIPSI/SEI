@@ -1,787 +1,682 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SEI | Autoconciencia, Claridad emocional, Intención</title>
-  <meta name="description" content="SEI es la práctica clínica de Carlos Rodríguez. Psicoterapia online para hispanohablantes, centrada en procesos: autoconciencia, claridad emocional e intención." />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet" />
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            sei: {
-              deep: '#0f4f55',
-              teal: '#16626a',
-              aqua: '#2ea3a7',
-              mist: '#e9f6f5'
-            }
-          },
-          fontFamily: {
-            display: ['Sora', 'sans-serif'],
-            body: ['Source Sans 3', 'sans-serif']
-          },
-          boxShadow: {
-            calm: '0 18px 45px -28px rgba(15, 79, 85, 0.45)'
-          },
-          keyframes: {
-            drift: {
-              '0%, 100%': { transform: 'translate3d(0, 0, 0) scale(1)' },
-              '50%': { transform: 'translate3d(18px, -20px, 0) scale(1.08)' }
-            },
-            reveal: {
-              '0%': { opacity: '0', transform: 'translateY(20px)' },
-              '100%': { opacity: '1', transform: 'translateY(0)' }
-            }
-          },
-          animation: {
-            drift: 'drift 14s ease-in-out infinite',
-            reveal: 'reveal 700ms ease forwards'
-          }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Psicoterapia online para adultos | SEI</title>
+<meta name="description" content="SEI es la práctica clínica de Carlos Rodríguez, psicólogo colombiano. Psicoterapia online con terapias contextuales, aplicadas a los procesos que sostienen el malestar: rumiación, autocrítica, evitación y ansiedad." />
+<meta name="robots" content="index, follow" />
+<meta property="og:title" content="Psicoterapia online para adultos | SEI" />
+<meta property="og:description" content="Práctica clínica online. Terapias contextuales aplicadas a rumiación, autocrítica, ansiedad y patrones que se repiten." />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="es_CO" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet" />
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        sei: {
+          deep: '#0f4f55',
+          teal: '#16626a',
+          aqua: '#2ea3a7',
+          mist: '#e9f6f5'
         }
-      }
-    };
-  </script>
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background: #f7fbfb;
-    }
-
-    @keyframes contentReveal {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
+      },
+      fontFamily: {
+        display: ['Sora', 'sans-serif'],
+        body: ['Source Sans 3', 'sans-serif']
+      },
+      boxShadow: {
+        calm: '0 18px 45px -28px rgba(15, 79, 85, 0.45)'
+      },
+      keyframes: {
+        drift: {
+          '0%, 100%': { transform: 'translate3d(0, 0, 0) scale(1)' },
+          '50%': { transform: 'translate3d(18px, -20px, 0) scale(1.08)' }
+        }
+      },
+      animation: {
+        drift: 'drift 14s ease-in-out infinite'
       }
     }
-
-    .content-reveal {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 700ms ease, transform 700ms ease;
-      will-change: opacity, transform;
-    }
-
-    .content-reveal.visible {
-      opacity: 1 !important;
-      transform: translateY(0) !important;
-      animation: contentReveal 700ms ease both;
-    }
-  </style>
-  <noscript>
-    <style>
-      .content-reveal {
-        opacity: 1 !important;
-        transform: none !important;
-      }
-    </style>
-  </noscript>
+  }
+};
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { background: #f7fbfb; }
+  @keyframes contentReveal {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .content-reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 700ms ease, transform 700ms ease;
+    will-change: opacity, transform;
+  }
+  .content-reveal.visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    animation: contentReveal 700ms ease both;
+  }
+</style>
+<noscript>
+  <style>.content-reveal { opacity: 1 !important; transform: none !important; }</style>
+</noscript>
 </head>
 <body class="font-body text-slate-800 antialiased selection:bg-sei-deep selection:text-white">
-  <div class="pointer-events-none fixed inset-0 -z-10 overflow-hidden" aria-hidden="true">
-    <div class="absolute -left-24 -top-20 h-80 w-80 rounded-full bg-gradient-to-br from-sei-teal/30 to-sei-aqua/20 blur-3xl animate-drift"></div>
-    <div class="absolute bottom-8 right-0 h-96 w-96 rounded-full bg-gradient-to-br from-sei-aqua/20 via-sei-teal/15 to-transparent blur-3xl animate-drift" style="animation-delay: -5s;"></div>
+
+<!-- Fondo decorativo -->
+<div class="pointer-events-none fixed inset-0 -z-10 overflow-hidden" aria-hidden="true">
+  <div class="absolute -left-24 -top-20 h-80 w-80 rounded-full bg-gradient-to-br from-sei-teal/25 to-sei-aqua/15 blur-3xl animate-drift"></div>
+  <div class="absolute bottom-8 right-0 h-96 w-96 rounded-full bg-gradient-to-br from-sei-aqua/15 via-sei-teal/10 to-transparent blur-3xl animate-drift" style="animation-delay: -5s;"></div>
+</div>
+
+<!-- Símbolo SEI reutilizable (recreación del logo oficial: creciente exterior, creciente interior, círculo focal) -->
+<svg width="0" height="0" class="absolute" aria-hidden="true">
+  <defs>
+    <symbol id="sei-logo" viewBox="0 0 200 200">
+      <defs>
+        <linearGradient id="seiLogoOuter" x1="30" y1="20" x2="170" y2="180" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#083c42" />
+          <stop offset="100%" stop-color="#0f5760" />
+        </linearGradient>
+        <linearGradient id="seiLogoInner" x1="70" y1="50" x2="160" y2="150" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#1d8c93" />
+          <stop offset="100%" stop-color="#3cb4b6" />
+        </linearGradient>
+        <mask id="seiLogoMaskOuter">
+          <rect width="200" height="200" fill="white" />
+          <circle cx="118" cy="100" r="58" fill="black" />
+        </mask>
+        <mask id="seiLogoMaskInner">
+          <rect width="200" height="200" fill="white" />
+          <circle cx="128" cy="100" r="42" fill="black" />
+        </mask>
+      </defs>
+      <!-- Creciente exterior (más oscuro) -->
+      <circle cx="100" cy="100" r="80" fill="url(#seiLogoOuter)" mask="url(#seiLogoMaskOuter)" />
+      <!-- Creciente interior (turquesa medio) -->
+      <circle cx="108" cy="100" r="68" fill="url(#seiLogoInner)" mask="url(#seiLogoMaskInner)" />
+      <!-- Círculo focal (el "punto" que equilibra el creciente) -->
+      <circle cx="142" cy="102" r="11" fill="#0b5f66" />
+    </symbol>
+  </defs>
+</svg>
+
+<!-- Header -->
+<header class="sticky top-0 z-50 border-b border-sei-deep/10 bg-white/80 backdrop-blur-md">
+  <div class="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4">
+    <a href="#inicio" class="flex items-center gap-3 text-sei-deep" aria-label="Ir al inicio de SEI">
+      <svg class="h-9 w-9" aria-hidden="true"><use href="#sei-logo" /></svg>
+      <span class="font-display text-sm font-semibold tracking-[0.24em]">SEI</span>
+    </a>
+    <nav class="hidden gap-6 text-sm text-slate-700 md:flex" aria-label="Navegación principal">
+      <a href="#para-quien" class="hover:text-sei-deep">Para quién es</a>
+      <a href="#enfoque" class="hover:text-sei-deep">Enfoque</a>
+      <a href="#proceso" class="hover:text-sei-deep">Cómo trabajamos</a>
+      <a href="#psicologo" class="hover:text-sei-deep">Sobre mí</a>
+      <a href="#faq" class="hover:text-sei-deep">Preguntas frecuentes</a>
+    </nav>
+    <a href="#agendar" class="rounded-full bg-sei-deep px-4 py-2 text-sm font-semibold text-white shadow-calm transition hover:bg-sei-teal">Agendar</a>
   </div>
+</header>
 
-  <header class="sticky top-0 z-50 border-b border-sei-deep/10 bg-white/80 backdrop-blur-md">
-    <div class="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4">
-      <a href="#inicio" class="flex items-center gap-2 text-sei-deep" aria-label="Ir al inicio">
-        <svg viewBox="0 0 160 160" class="h-8 w-8" fill="none" aria-hidden="true">
-          <defs>
-            <linearGradient id="seiSmallOuter" x1="16" y1="20" x2="116" y2="132" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#055864" />
-              <stop offset="1" stop-color="#0f6e78" />
-            </linearGradient>
-            <linearGradient id="seiSmallInner" x1="44" y1="38" x2="140" y2="132" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#1ca7b0" />
-              <stop offset="1" stop-color="#73d0d2" />
-            </linearGradient>
-            <mask id="seiMaskSmallOuter">
-              <rect width="160" height="160" fill="white" />
-              <circle cx="100" cy="82" r="44" fill="black" />
-            </mask>
-            <mask id="seiMaskSmallInner">
-              <rect width="160" height="160" fill="white" />
-              <circle cx="106" cy="82" r="34" fill="black" />
-            </mask>
-          </defs>
-          <circle cx="70" cy="82" r="62" fill="url(#seiSmallOuter)" mask="url(#seiMaskSmallOuter)" />
-          <circle cx="76" cy="82" r="54" fill="url(#seiSmallInner)" mask="url(#seiMaskSmallInner)" opacity="0.95" />
-          <circle cx="120" cy="84" r="9" fill="#0b5f66" />
-        </svg>
-        <span class="font-display text-sm font-semibold tracking-[0.2em]">SEI</span>
-      </a>
+<main id="inicio">
 
-      <nav class="hidden gap-6 text-sm text-slate-700 md:flex" aria-label="Navegación principal">
-        <a href="#enfoque" class="hover:text-sei-deep">Enfoque</a>
-        <a href="#proceso" class="hover:text-sei-deep">Cómo trabajo</a>
-        <a href="#limites" class="hover:text-sei-deep">Para quién es</a>
-        <a href="#faq" class="hover:text-sei-deep">Preguntas frecuentes</a>
-        <a href="#contacto" class="hover:text-sei-deep">Contacto</a>
-      </nav>
-
-      <a href="#contacto" class="rounded-full bg-sei-deep px-4 py-2 text-sm font-semibold text-white shadow-calm transition hover:bg-sei-teal" aria-label="Ir a agendar una consulta">Agenda una consulta</a>
+<!-- HERO -->
+<section class="mx-auto grid w-full max-w-6xl gap-12 px-6 pb-20 pt-20 md:grid-cols-[1.1fr_0.9fr] md:pt-28">
+  <div class="content-reveal visible space-y-8">
+    <div class="inline-flex items-center gap-2 rounded-full border border-sei-deep/20 bg-white/80 px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-sei-deep">
+      Atención online
     </div>
-  </header>
-
-  <main id="inicio">
-    <section class="mx-auto grid w-full max-w-6xl gap-12 px-6 pb-20 pt-20 md:grid-cols-[1.1fr_0.9fr] md:pt-28">
-      <div class="content-reveal visible space-y-8">
-        <div class="inline-flex items-center gap-2 rounded-full border border-sei-deep/20 bg-white/80 px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-sei-deep">
-          Psicoterapia online para hispanohablantes en cualquier país
-        </div>
-
-        <div class="space-y-4">
-          <h1 class="font-display text-5xl font-semibold leading-tight text-sei-deep md:text-7xl">SEI</h1>
-          <p class="font-display text-2xl text-slate-700 md:text-3xl">Autoconciencia. Claridad emocional. Intención.</p>
-        </div>
-
-        <p class="max-w-2xl text-lg leading-relaxed text-slate-700">
-          La práctica clínica en SEI está enfocada en entender los procesos que mantienen el sufrimiento emocional y convertir esa comprensión en acciones concretas, alineadas con valores.
-        </p>
-
-        <div class="grid gap-3 sm:grid-cols-3">
-          <article class="rounded-2xl border border-sei-deep/10 bg-white p-4 shadow-calm">
-            <p class="font-display text-sm font-semibold text-sei-deep">S | Autoconciencia</p>
-            <p class="mt-2 text-sm text-slate-700">Observar patrones internos sin evasión.</p>
-          </article>
-          <article class="rounded-2xl border border-sei-deep/10 bg-white p-4 shadow-calm">
-            <p class="font-display text-sm font-semibold text-sei-deep">E | Claridad emocional</p>
-            <p class="mt-2 text-sm text-slate-700">Diferenciar hechos, pensamientos y emociones.</p>
-          </article>
-          <article class="rounded-2xl border border-sei-deep/10 bg-white p-4 shadow-calm">
-            <p class="font-display text-sm font-semibold text-sei-deep">I | Intención</p>
-            <p class="mt-2 text-sm text-slate-700">Elegir conductas guiadas por valores.</p>
-          </article>
-        </div>
-
-        <div class="flex flex-wrap gap-3">
-          <a href="#contacto" class="rounded-full bg-sei-deep px-7 py-3 text-sm font-semibold text-white shadow-calm transition hover:bg-sei-teal">Agenda una consulta</a>
-          <a href="#filosofia" class="rounded-full border border-sei-deep/30 bg-white px-7 py-3 text-sm font-semibold text-sei-deep transition hover:border-sei-deep hover:bg-sei-mist">Leer filosofía terapéutica</a>
-        </div>
+    <div class="space-y-5">
+      <h1 class="font-display text-4xl font-semibold leading-tight text-sei-deep md:text-5xl lg:text-6xl">
+        Psicoterapia online<br/>para adultos
+      </h1>
+      <p class="font-display text-xl text-slate-700 md:text-2xl">
+        Terapias contextuales aplicadas a los procesos que sostienen el malestar.
+      </p>
+      <p class="font-display text-lg text-slate-600">
+        <span class="font-semibold text-sei-deep">SEI</span> — Autoconciencia. Claridad. Intención.
+      </p>
+    </div>
+    <p class="max-w-2xl text-lg leading-relaxed text-slate-700">
+      Un espacio de psicoterapia para adultos que buscan trabajo clínico estructurado, no consejos ni desahogo sin dirección. Se atiende con o sin diagnóstico formal, con foco en los procesos que sostienen el malestar — rumiación, autocrítica, evitación, patrones que se repiten — más que en las etiquetas que lo describen.
+    </p>
+    <div class="flex flex-wrap gap-3">
+      <a href="#agendar" class="rounded-full bg-sei-deep px-7 py-3 text-sm font-semibold text-white shadow-calm transition hover:bg-sei-teal">Agendar primera sesión</a>
+      <a href="#enfoque" class="rounded-full border border-sei-deep/30 bg-white px-7 py-3 text-sm font-semibold text-sei-deep transition hover:border-sei-deep hover:bg-sei-mist">Conocer el enfoque</a>
+    </div>
+  </div>
+  <div class="content-reveal visible flex items-center justify-center">
+    <div class="relative flex h-[420px] w-[420px] max-w-full items-center justify-center rounded-full bg-gradient-to-br from-sei-mist to-white shadow-calm">
+      <svg class="h-[78%] w-[78%]" aria-label="Emblema de SEI"><use href="#sei-logo" /></svg>
+      <div class="absolute bottom-10 rounded-full bg-white/90 px-5 py-2 text-center shadow-calm">
+        <p class="font-display text-xs font-semibold tracking-[0.18em] text-sei-deep">CONCIENCIA · CLARIDAD · INTENCIÓN</p>
       </div>
+    </div>
+  </div>
+</section>
 
-      <div class="content-reveal visible flex items-center justify-center">
-        <div class="relative flex h-[420px] w-[420px] max-w-full items-center justify-center rounded-full bg-gradient-to-br from-sei-mist to-white shadow-calm">
-          <svg viewBox="0 0 360 320" class="h-[78%] w-[78%]" fill="none" aria-label="Emblema oficial de SEI">
-            <defs>
-              <linearGradient id="seiHeroOuter" x1="8" y1="28" x2="228" y2="286" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#035662" />
-                <stop offset="1" stop-color="#0a6a74" />
-              </linearGradient>
-              <linearGradient id="seiHeroInner" x1="72" y1="46" x2="288" y2="254" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#10a3ac" />
-                <stop offset="1" stop-color="#7ad4d6" />
-              </linearGradient>
-              <linearGradient id="seiHeroCore" x1="112" y1="76" x2="294" y2="246" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#7fd5d7" />
-                <stop offset="1" stop-color="#d9f1ef" />
-              </linearGradient>
-              <mask id="seiHeroMaskOuter">
-                <rect width="360" height="320" fill="white" />
-                <circle cx="244" cy="170" r="108" fill="black" />
-              </mask>
-              <mask id="seiHeroMaskInner">
-                <rect width="360" height="320" fill="white" />
-                <circle cx="250" cy="170" r="90" fill="black" />
-              </mask>
-              <mask id="seiHeroMaskCore">
-                <rect width="360" height="320" fill="white" />
-                <circle cx="256" cy="170" r="72" fill="black" />
-              </mask>
-            </defs>
-            <circle cx="148" cy="170" r="132" fill="url(#seiHeroOuter)" mask="url(#seiHeroMaskOuter)" />
-            <circle cx="160" cy="170" r="116" fill="url(#seiHeroInner)" mask="url(#seiHeroMaskInner)" opacity="0.96" />
-            <circle cx="172" cy="170" r="100" fill="url(#seiHeroCore)" mask="url(#seiHeroMaskCore)" opacity="0.94" />
-            <circle cx="284" cy="172" r="20" fill="#0b5f66" />
-          </svg>
-          <div class="absolute bottom-10 rounded-full bg-white/90 px-5 py-2 text-center shadow-calm">
-            <p class="font-display text-sm font-semibold tracking-[0.16em] text-sei-deep">CONCIENCIA · PROCESO · CONTINUIDAD</p>
-          </div>
-        </div>
-      </div>
-    </section>
+<!-- PARA QUIÉN ES -->
+<section id="para-quien" class="mx-auto w-full max-w-6xl px-6 py-16">
+  <div class="content-reveal rounded-[2rem] border border-sei-deep/15 bg-white p-8 shadow-calm md:p-12">
+    <h2 class="font-display text-3xl font-semibold text-sei-deep md:text-4xl">Para quién es este espacio</h2>
+    <p class="mt-4 max-w-3xl text-lg leading-relaxed text-slate-700">
+      La mayoría de personas que consultan en SEI no llegan por un diagnóstico formal, sino porque reconocen que ciertos patrones internos o relacionales se repiten y generan un malestar persistente que no logran mover con lo que han probado.
+    </p>
 
-    <section id="enfoque" class="mx-auto w-full max-w-6xl px-6 py-16">
-      <div class="content-reveal rounded-[2rem] border border-sei-deep/15 bg-white p-8 shadow-calm md:p-12">
-        <h2 class="font-display text-3xl font-semibold text-sei-deep md:text-4xl">Enfoque clínico</h2>
-        <p class="mt-4 max-w-3xl text-lg text-slate-700">
-          Trabajo desde las terapias contextuales o terapias de tercera generación, integrando ACT, DBT y Mindfulness, junto con análisis funcional de la conducta y trabajo metacognitivo sobre rumiación y autocrítica.
-        </p>
-        <p class="mt-4 max-w-3xl leading-relaxed text-slate-700">
-          Principio central: el problema no siempre es el evento, sino el bucle que lo mantiene activo.
-        </p>
+    <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <article class="rounded-2xl border border-sei-deep/10 bg-white p-5 shadow-calm">
+        <h3 class="font-display text-lg font-semibold text-sei-deep">Rumiación persistente</h3>
+        <p class="mt-2 text-slate-700">Pensamientos que vuelven sobre el pasado o el futuro y no ceden con razonar más.</p>
+      </article>
+      <article class="rounded-2xl border border-sei-deep/10 bg-white p-5 shadow-calm">
+        <h3 class="font-display text-lg font-semibold text-sei-deep">Autocrítica intensa</h3>
+        <p class="mt-2 text-slate-700">Una voz interna de juicio o exigencia difícil de sostener en el tiempo.</p>
+      </article>
+      <article class="rounded-2xl border border-sei-deep/10 bg-white p-5 shadow-calm">
+        <h3 class="font-display text-lg font-semibold text-sei-deep">Ansiedad persistente</h3>
+        <p class="mt-2 text-slate-700">Estados de alerta o preocupación que interfieren con el trabajo, el sueño o los vínculos.</p>
+      </article>
+      <article class="rounded-2xl border border-sei-deep/10 bg-white p-5 shadow-calm">
+        <h3 class="font-display text-lg font-semibold text-sei-deep">Patrones en relaciones</h3>
+        <p class="mt-2 text-slate-700">Conflictos repetitivos, miedo al rechazo o dificultad para poner límites.</p>
+      </article>
+      <article class="rounded-2xl border border-sei-deep/10 bg-white p-5 shadow-calm">
+        <h3 class="font-display text-lg font-semibold text-sei-deep">Sensación de estancamiento</h3>
+        <p class="mt-2 text-slate-700">Falta de claridad sobre el rumbo, pérdida de sentido, dificultad para decidir.</p>
+      </article>
+      <article class="rounded-2xl border border-sei-deep/10 bg-white p-5 shadow-calm">
+        <h3 class="font-display text-lg font-semibold text-sei-deep">Malestar difícil de nombrar</h3>
+        <p class="mt-2 text-slate-700">Algo no se siente bien internamente, pero no es fácil identificar exactamente qué.</p>
+      </article>
+    </div>
 
-        <div class="mt-8">
-          <p class="text-sm font-semibold uppercase tracking-[0.18em] text-sei-teal">Bucle de mantenimiento</p>
-          <div class="mt-4 flex flex-col items-center gap-3 md:flex-row md:justify-between md:gap-2" aria-label="Diagrama de bucle terapéutico">
-            <div class="w-full rounded-2xl border border-sei-deep/10 bg-sei-mist px-4 py-3 text-center font-medium text-sei-deep md:w-auto">Disparador</div>
-            <div class="text-sei-teal" aria-hidden="true">→</div>
-            <div class="w-full rounded-2xl border border-sei-deep/10 bg-sei-mist px-4 py-3 text-center font-medium text-sei-deep md:w-auto">Pensamiento</div>
-            <div class="text-sei-teal" aria-hidden="true">→</div>
-            <div class="w-full rounded-2xl border border-sei-deep/10 bg-sei-mist px-4 py-3 text-center font-medium text-sei-deep md:w-auto">Emoción</div>
-            <div class="text-sei-teal" aria-hidden="true">→</div>
-            <div class="w-full rounded-2xl border border-sei-deep/10 bg-sei-mist px-4 py-3 text-center font-medium text-sei-deep md:w-auto">Conducta</div>
-            <div class="text-sei-teal" aria-hidden="true">→</div>
-            <div class="w-full rounded-2xl border border-sei-deep/10 bg-sei-mist px-4 py-3 text-center font-medium text-sei-deep md:w-auto">Consecuencia</div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="proceso-terapeutico" class="mx-auto w-full max-w-6xl px-6 py-16">
-      <div class="content-reveal rounded-[2rem] border border-sei-deep/15 bg-white p-8 shadow-calm md:p-12">
-        <h2 class="font-display text-3xl font-semibold text-sei-deep md:text-4xl">Cómo es el proceso terapéutico</h2>
-        <p class="mt-4 max-w-3xl text-lg leading-relaxed text-slate-700">
-          La terapia no consiste únicamente en hablar de lo que duele. El objetivo es comprender los procesos que mantienen el malestar y desarrollar formas más flexibles de responder a ellos.
-        </p>
-        <p class="mt-3 max-w-3xl leading-relaxed text-slate-700">
-          El proceso terapéutico suele avanzar en varias etapas.
-        </p>
-
-        <div class="mt-8 grid gap-5 md:grid-cols-2">
-          <article class="rounded-2xl border border-sei-deep/10 bg-sei-mist/60 p-6">
-            <p class="text-sm font-semibold uppercase tracking-[0.16em] text-sei-teal">Etapa 1</p>
-            <h3 class="mt-2 font-display text-2xl font-semibold text-sei-deep">Crear un espacio seguro de trabajo</h3>
-            <p class="mt-3 leading-relaxed text-slate-700">
-              La primera sesión está orientada principalmente a construir un espacio de confianza y seguridad.
-            </p>
-            <p class="mt-3 text-slate-700">Es importante que puedas sentir que:</p>
-            <ul class="mt-3 space-y-2 text-slate-700">
-              <li class="rounded-xl bg-white px-4 py-2">Puedes hablar con libertad.</li>
-              <li class="rounded-xl bg-white px-4 py-2">No vas a ser juzgado.</li>
-              <li class="rounded-xl bg-white px-4 py-2">Tus experiencias serán escuchadas con respeto.</li>
-            </ul>
-            <p class="mt-4 leading-relaxed text-slate-700">
-              La terapia funciona mejor cuando existe un vínculo de trabajo claro entre terapeuta y paciente. Por eso, antes de profundizar en el análisis de los problemas, buscamos establecer una base de confianza que permita explorar con mayor claridad lo que está ocurriendo.
-            </p>
-          </article>
-
-          <article class="rounded-2xl border border-sei-deep/10 bg-sei-mist/60 p-6">
-            <p class="text-sm font-semibold uppercase tracking-[0.16em] text-sei-teal">Etapa 2</p>
-            <h3 class="mt-2 font-display text-2xl font-semibold text-sei-deep">Comprender la situación actual</h3>
-            <p class="mt-3 leading-relaxed text-slate-700">
-              Una vez existe ese espacio de trabajo, empezamos a explorar:
-            </p>
-            <ul class="mt-3 space-y-2 text-slate-700">
-              <li class="rounded-xl bg-white px-4 py-2">Qué está ocurriendo en tu vida actualmente.</li>
-              <li class="rounded-xl bg-white px-4 py-2">Qué situaciones generan mayor malestar.</li>
-              <li class="rounded-xl bg-white px-4 py-2">Qué pensamientos y emociones aparecen con más frecuencia.</li>
-              <li class="rounded-xl bg-white px-4 py-2">Qué patrones parecen repetirse.</li>
-            </ul>
-            <p class="mt-4 leading-relaxed text-slate-700">
-              El objetivo no es encontrar explicaciones rápidas, sino comprender cómo funciona el problema en tu vida cotidiana.
-            </p>
-          </article>
-
-          <article class="rounded-2xl border border-sei-deep/10 bg-sei-mist/60 p-6">
-            <p class="text-sm font-semibold uppercase tracking-[0.16em] text-sei-teal">Etapa 3</p>
-            <h3 class="mt-2 font-display text-2xl font-semibold text-sei-deep">Identificar los procesos que mantienen el malestar</h3>
-            <p class="mt-3 leading-relaxed text-slate-700">
-              Muchas dificultades psicológicas se mantienen por ciclos como este:
-            </p>
-            <p class="mt-3 rounded-xl bg-white px-4 py-3 text-center font-medium text-sei-deep">
-              evento → pensamiento → emoción → conducta → consecuencia
-            </p>
-            <p class="mt-3 text-slate-700">Por ejemplo:</p>
-            <ul class="mt-3 space-y-2 text-slate-700">
-              <li class="rounded-xl bg-white px-4 py-2">Rumiación constante.</li>
-              <li class="rounded-xl bg-white px-4 py-2">Evitación de emociones difíciles.</li>
-              <li class="rounded-xl bg-white px-4 py-2">Autocrítica intensa.</li>
-              <li class="rounded-xl bg-white px-4 py-2">Patrones repetitivos en relaciones.</li>
-            </ul>
-            <p class="mt-4 leading-relaxed text-slate-700">
-              La terapia busca identificar estos procesos y entender cómo se sostienen en el tiempo.
-            </p>
-          </article>
-
-          <article class="rounded-2xl border border-sei-deep/10 bg-sei-mist/60 p-6">
-            <p class="text-sm font-semibold uppercase tracking-[0.16em] text-sei-teal">Etapa 4</p>
-            <h3 class="mt-2 font-display text-2xl font-semibold text-sei-deep">Desarrollar mayor claridad psicológica</h3>
-            <p class="mt-3 text-slate-700">A partir de ese análisis trabajamos habilidades como:</p>
-            <ul class="mt-3 space-y-2 text-slate-700">
-              <li class="rounded-xl bg-white px-4 py-2">Diferenciar pensamiento de realidad.</li>
-              <li class="rounded-xl bg-white px-4 py-2">Relacionarse de forma distinta con emociones difíciles.</li>
-              <li class="rounded-xl bg-white px-4 py-2">Reducir rumiación y autocrítica.</li>
-              <li class="rounded-xl bg-white px-4 py-2">Ampliar la capacidad de responder con mayor conciencia.</li>
-            </ul>
-            <p class="mt-4 leading-relaxed text-slate-700">
-              El objetivo no es eliminar las emociones, sino desarrollar mayor claridad frente a ellas.
-            </p>
-          </article>
-
-          <article class="rounded-2xl border border-sei-deep/10 bg-sei-mist/60 p-6 md:col-span-2">
-            <p class="text-sm font-semibold uppercase tracking-[0.16em] text-sei-teal">Etapa 5</p>
-            <h3 class="mt-2 font-display text-2xl font-semibold text-sei-deep">Llevar los cambios a la vida cotidiana</h3>
-            <p class="mt-3 leading-relaxed text-slate-700">
-              La terapia también implica traducir esa comprensión en acciones concretas.
-            </p>
-            <p class="mt-3 text-slate-700">Esto puede incluir:</p>
-            <ul class="mt-3 grid gap-2 text-slate-700 md:grid-cols-3">
-              <li class="rounded-xl bg-white px-4 py-2">Pequeños experimentos conductuales.</li>
-              <li class="rounded-xl bg-white px-4 py-2">Nuevas formas de responder a situaciones difíciles.</li>
-              <li class="rounded-xl bg-white px-4 py-2">Acciones alineadas con lo que realmente es importante para ti.</li>
-            </ul>
-            <p class="mt-4 leading-relaxed text-slate-700">
-              El cambio psicológico ocurre cuando comprensión y acción empiezan a integrarse.
-            </p>
-          </article>
-        </div>
-
-        <p class="mt-8 rounded-2xl border border-sei-deep/10 bg-white px-6 py-4 text-center text-slate-700">
-          Un proceso terapéutico sólido combina tres elementos: conciencia, claridad e intención.
-        </p>
-      </div>
-    </section>
-
-    <section id="situaciones" class="mx-auto w-full max-w-6xl px-6 py-16">
-      <div class="content-reveal rounded-[2rem] border border-sei-deep/15 bg-white p-8 shadow-calm md:p-12">
-        <h2 class="font-display text-3xl font-semibold text-sei-deep md:text-4xl">Situaciones en las que puedo ayudarte</h2>
-        <p class="mt-4 max-w-3xl text-lg leading-relaxed text-slate-700">
-          Muchas personas llegan a terapia no solo por un diagnóstico, sino porque sienten que ciertos patrones internos o relacionales se repiten y generan malestar.
-        </p>
-        <p class="mt-3 max-w-3xl leading-relaxed text-slate-700">
-          Algunas de las situaciones más frecuentes incluyen:
-        </p>
-
-        <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          <article class="rounded-2xl border border-sei-deep/10 bg-white p-5 shadow-calm">
-            <h3 class="font-display text-xl font-semibold text-sei-deep">Rumiación constante</h3>
-            <p class="mt-2 text-slate-700">Pensamientos que se repiten una y otra vez sobre el pasado o el futuro.</p>
-          </article>
-          <article class="rounded-2xl border border-sei-deep/10 bg-white p-5 shadow-calm">
-            <h3 class="font-display text-xl font-semibold text-sei-deep">Autocrítica intensa</h3>
-            <p class="mt-2 text-slate-700">Una relación interna marcada por juicio constante o exigencia difícil de sostener.</p>
-          </article>
-          <article class="rounded-2xl border border-sei-deep/10 bg-white p-5 shadow-calm">
-            <h3 class="font-display text-xl font-semibold text-sei-deep">Ansiedad persistente</h3>
-            <p class="mt-2 text-slate-700">Estados de alerta o preocupación que empiezan a interferir con la vida cotidiana.</p>
-          </article>
-          <article class="rounded-2xl border border-sei-deep/10 bg-white p-5 shadow-calm">
-            <h3 class="font-display text-xl font-semibold text-sei-deep">Dificultades en relaciones</h3>
-            <p class="mt-2 text-slate-700">Conflictos repetitivos, miedo al rechazo o dificultad para establecer límites.</p>
-          </article>
-          <article class="rounded-2xl border border-sei-deep/10 bg-white p-5 shadow-calm">
-            <h3 class="font-display text-xl font-semibold text-sei-deep">Sensación de estancamiento</h3>
-            <p class="mt-2 text-slate-700">Momentos en los que aparece la sensación de no tener claridad sobre el rumbo de la vida.</p>
-          </article>
-          <article class="rounded-2xl border border-sei-deep/10 bg-white p-5 shadow-calm">
-            <h3 class="font-display text-xl font-semibold text-sei-deep">Procesos de duelo o ruptura</h3>
-            <p class="mt-2 text-slate-700">Situaciones de pérdida o cambios importantes que requieren reorganización emocional.</p>
-          </article>
-          <article class="rounded-2xl border border-sei-deep/10 bg-white p-5 shadow-calm sm:col-span-2 lg:col-span-3">
-            <h3 class="font-display text-xl font-semibold text-sei-deep">Malestar emocional difícil de comprender</h3>
-            <p class="mt-2 text-slate-700">Cuando algo no se siente bien internamente, pero no es fácil identificar por qué.</p>
-          </article>
-        </div>
-
-        <p class="mt-8 max-w-4xl text-lg leading-relaxed text-slate-700">
-          La terapia busca comprender estos procesos con mayor claridad y desarrollar formas más flexibles de responder a ellos.
-        </p>
-      </div>
-    </section>
-
-    <section id="filosofia" class="mx-auto w-full max-w-6xl px-6 py-16">
-      <div class="content-reveal rounded-[2rem] bg-gradient-to-br from-sei-deep to-sei-teal p-10 text-white shadow-calm md:p-14">
-        <h2 class="font-display text-3xl font-semibold md:text-4xl">Filosofía terapéutica</h2>
-        <p class="mt-4 max-w-3xl text-lg text-white/90">
-          La terapia no es un espacio para validar todo sin dirección. Es un proceso clínico para entender mecanismos, cortar ciclos que sostienen el malestar y construir flexibilidad psicológica.
-        </p>
-        <ul class="mt-6 grid gap-3 text-white/90 md:grid-cols-3">
-          <li class="rounded-xl border border-white/20 bg-white/5 px-4 py-3">No buscamos eliminar el dolor humano.</li>
-          <li class="rounded-xl border border-white/20 bg-white/5 px-4 py-3">Buscamos responder con claridad, no en piloto automático.</li>
-          <li class="rounded-xl border border-white/20 bg-white/5 px-4 py-3">Medimos avances en conducta, no solo en intención.</li>
+    <!-- Límites del servicio (fusiona para quién es / para quién no es) -->
+    <div class="mt-12 grid gap-6 md:grid-cols-2">
+      <div class="rounded-2xl bg-sei-mist/60 p-6">
+        <h3 class="font-display text-xl font-semibold text-sei-deep">Este trabajo te puede servir si</h3>
+        <ul class="mt-4 space-y-3 text-slate-700">
+          <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-sei-deep"></span><span>Estás dispuesto a mirar los mecanismos que sostienen tu malestar, no solo aliviarlo.</span></li>
+          <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-sei-deep"></span><span>Quieres decidir con base en valores, no solo en alivio inmediato.</span></li>
+          <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-sei-deep"></span><span>Tienes disponibilidad para practicar entre sesiones.</span></li>
+          <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-sei-deep"></span><span>Buscas un proceso clínico estructurado, no un espacio de desahogo sin dirección.</span></li>
         </ul>
       </div>
-    </section>
-
-    <section id="sobre-mi" class="mx-auto w-full max-w-6xl px-6 py-16">
-      <div class="content-reveal rounded-[2rem] border border-sei-deep/15 bg-white p-8 shadow-calm md:p-12">
-        <div class="max-w-4xl">
-          <h2 class="font-display text-3xl font-semibold text-sei-deep md:text-4xl">Sobre mí</h2>
-          <div class="mt-5 space-y-5 text-lg leading-relaxed text-slate-700">
-            <p>Soy psicólogo clínico y trabajo principalmente con personas que sienten que están atrapadas en patrones emocionales o de pensamiento que se repiten, como la rumiación constante, la autocrítica intensa o situaciones personales que parecen volver una y otra vez.</p>
-            <p>En mi trabajo terapéutico me interesa especialmente ayudar a las personas a comprender los procesos psicológicos que están manteniendo su malestar. Muchas veces el sufrimiento no proviene únicamente de lo que ocurre, sino de la forma en que aprendemos a relacionarnos con nuestros pensamientos, emociones y decisiones.</p>
-            <p>Mi enfoque se basa en terapias psicológicas contemporáneas centradas en procesos. El objetivo es desarrollar mayor autoconciencia, claridad emocional e intención en las decisiones que tomamos en nuestra vida.</p>
-            <p>Soy psicólogo clínico colombiano y cuento con formación de posgrado en terapias de tercera generación. Trabajo principalmente en modalidad online con personas de distintos países de habla hispana.</p>
-            <p>Si estás considerando iniciar un proceso terapéutico, la primera sesión suele ser simplemente un espacio para comprender qué está ocurriendo y explorar si este proceso puede ser útil para ti.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="proceso" class="mx-auto w-full max-w-6xl px-6 py-16">
-      <div class="content-reveal mb-8 max-w-3xl">
-        <h2 class="font-display text-3xl font-semibold text-sei-deep md:text-4xl">Cómo trabajo en sesión</h2>
-        <p class="mt-3 text-lg text-slate-700">Proceso simple en tres pasos, alineado con SEI.</p>
-      </div>
-
-      <div class="grid gap-6 md:grid-cols-3">
-        <article class="content-reveal rounded-3xl border border-sei-deep/15 bg-white p-7 shadow-calm">
-          <p class="text-sm font-semibold uppercase tracking-[0.16em] text-sei-teal">Paso 1</p>
-          <h3 class="mt-2 font-display text-2xl font-semibold text-sei-deep">Autoconciencia</h3>
-          <p class="mt-3 text-slate-700">Mapeamos patrones de rumiación, autocrítica, evitación y dinámicas relacionales en situaciones concretas.</p>
-        </article>
-
-        <article class="content-reveal rounded-3xl border border-sei-deep/15 bg-white p-7 shadow-calm">
-          <p class="text-sm font-semibold uppercase tracking-[0.16em] text-sei-teal">Paso 2</p>
-          <h3 class="mt-2 font-display text-2xl font-semibold text-sei-deep">Claridad emocional</h3>
-          <p class="mt-3 text-slate-700">Diferenciamos interpretación, emoción y necesidad para reducir confusión y decisiones impulsivas.</p>
-        </article>
-
-        <article class="content-reveal rounded-3xl border border-sei-deep/15 bg-white p-7 shadow-calm">
-          <p class="text-sm font-semibold uppercase tracking-[0.16em] text-sei-teal">Paso 3</p>
-          <h3 class="mt-2 font-display text-2xl font-semibold text-sei-deep">Intención</h3>
-          <p class="mt-3 text-slate-700">Diseñamos acciones semanales alineadas con valores y revisamos resultados para ajustar con precisión clínica.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="experiencias-pacientes" class="mx-auto w-full max-w-6xl px-6 py-16">
-      <div class="content-reveal rounded-[2rem] border border-sei-deep/10 bg-slate-50 p-8 md:p-12">
-        <div class="max-w-3xl">
-          <h2 class="font-display text-3xl font-semibold text-sei-deep md:text-4xl">Experiencias de pacientes</h2>
-          <p class="mt-3 text-lg text-slate-700">Comentarios anónimos compartidos por personas que han pasado por el proceso terapéutico.</p>
-        </div>
-
-        <div class="mt-8 grid gap-6 md:grid-cols-3">
-          <article class="content-reveal rounded-2xl border border-sei-deep/10 bg-white p-6 shadow-calm">
-            <p class="leading-relaxed text-slate-700">“Me sentí escuchada desde el primer momento. Es un espacio seguro para hablar con honestidad.”</p>
-          </article>
-
-          <article class="content-reveal rounded-2xl border border-sei-deep/10 bg-white p-6 shadow-calm">
-            <p class="leading-relaxed text-slate-700">“Explica los procesos de forma clara y humana, lo que ayuda mucho a entender lo que uno está viviendo.”</p>
-          </article>
-
-          <article class="content-reveal rounded-2xl border border-sei-deep/10 bg-white p-6 shadow-calm">
-            <p class="leading-relaxed text-slate-700">“Después de las sesiones suelo sentir mucha tranquilidad.”</p>
-          </article>
-        </div>
-
-        <a href="https://app.selia.co/specialists/d95fc214-ed07-4fa3-9ee0-ad0ab6cf087b" target="_blank" rel="noopener noreferrer" class="mt-10 inline-flex rounded-full bg-sei-deep px-7 py-3 text-sm font-semibold text-white shadow-calm transition hover:bg-sei-teal">
-          Ver disponibilidad en Selia
-        </a>
-      </div>
-    </section>
-
-    <section id="psicologo" class="mx-auto w-full max-w-6xl px-6 py-16">
-      <div class="content-reveal grid gap-8 rounded-[2rem] border border-slate-800/70 bg-slate-900 p-8 shadow-calm text-white md:grid-cols-[0.9fr_1.1fr] md:p-12">
-        <article>
-          <p class="text-sm font-semibold uppercase tracking-[0.16em] text-sei-aqua">Sobre el psicólogo</p>
-          <h2 class="mt-3 font-display text-3xl font-semibold text-white">Carlos Rodríguez</h2>
-          <p class="mt-2 text-lg text-white/90">Psicólogo clínico</p>
-          <p class="mt-4 leading-relaxed text-white/85">
-            Psicólogo colombiano con práctica centrada en psicoterapia basada en procesos para población adulta hispanohablante.
-          </p>
-          <p class='mt-4 text-base font-semibold text-white'>Máster en Terapias de Tercera Generación – Universidad Internacional de Valencia (VIU)</p>
-          <p class='mt-2 text-base text-white/90'>Psicólogo - Universidad CES</p>
-        </article>
-
-        <article>
-          <h3 class="font-display text-2xl font-semibold text-white">Foco de intervención</h3>
-          <ul class="mt-4 space-y-3 text-white/90">
-            <li class="rounded-xl bg-slate-800 px-4 py-3">Análisis funcional de patrones que sostienen el malestar.</li>
-            <li class="rounded-xl bg-slate-800 px-4 py-3">Entrenamiento en flexibilidad psicológica y regulación emocional.</li>
-            <li class="rounded-xl bg-slate-800 px-4 py-3">Trabajo metacognitivo sobre rumiación, autocrítica y narrativas de identidad.</li>
-            <li class="rounded-xl bg-slate-800 px-4 py-3">Diseño de acciones observables, realistas y alineadas con valores.</li>
-          </ul>
-          <p class='mt-6 border-l-2 border-sei-aqua/60 pl-4 text-white/85'>Mi trabajo no se centra solo en hablar de los problemas, sino en comprender los procesos que los mantienen y desarrollar acciones concretas para cambiarlos.</p>
-        </article>
-      </div>
-    </section>
-    <section id="limites" class="mx-auto w-full max-w-6xl px-6 py-16">
-      <div class="content-reveal grid gap-8 rounded-[2rem] border border-sei-deep/15 bg-white p-8 shadow-calm md:grid-cols-2 md:p-12">
-        <article>
-          <h2 class="font-display text-3xl font-semibold text-sei-deep">Para quién es</h2>
-          <ul class="mt-5 space-y-3 text-slate-700">
-            <li class="rounded-xl bg-sei-mist px-4 py-3">Personas con rumiación persistente y autocrítica intensa.</li>
-            <li class="rounded-xl bg-sei-mist px-4 py-3">Quienes se sienten emocionalmente sobrepasadas con frecuencia.</li>
-            <li class="rounded-xl bg-sei-mist px-4 py-3">Quienes repiten patrones en vínculos y quieren cambiarlos con método.</li>
-            <li class="rounded-xl bg-sei-mist px-4 py-3">Personas que quieren decidir con base en valores, no solo en alivio inmediato.</li>
-          </ul>
-        </article>
-
-        <article>
-          <h2 class="font-display text-3xl font-semibold text-sei-deep">Para quién no es</h2>
-          <ul class="mt-5 space-y-3 text-slate-700">
-            <li class="rounded-xl bg-slate-100 px-4 py-3">Si buscas solo desahogo sin trabajo clínico estructurado.</li>
-            <li class="rounded-xl bg-slate-100 px-4 py-3">Si esperas frases motivacionales sin análisis funcional.</li>
-            <li class="rounded-xl bg-slate-100 px-4 py-3">Si necesitas atención de emergencia psiquiátrica inmediata.</li>
-            <li class="rounded-xl bg-slate-100 px-4 py-3">Si no tienes disponibilidad mínima para practicar entre sesiones.</li>
-          </ul>
-          <p class="mt-5 text-sm text-slate-600">En situaciones de riesgo agudo, contacta servicios de emergencia de tu país.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="faq" class="mx-auto w-full max-w-6xl px-6 py-16">
-      <div class="content-reveal mb-8 max-w-3xl">
-        <h2 class="font-display text-3xl font-semibold text-sei-deep md:text-4xl">Preguntas frecuentes</h2>
-        <p class="mt-3 text-lg text-slate-700">Respuestas claras para que sepas si este enfoque encaja contigo.</p>
-      </div>
-
-      <div class="space-y-4">
-        <details class="content-reveal rounded-2xl border border-sei-deep/15 bg-white p-5 shadow-calm">
-          <summary class="cursor-pointer font-semibold text-sei-deep">¿La terapia es solo para personas en Colombia?</summary>
-          <p class="mt-3 text-slate-700">No. La atención es online y está pensada para hispanohablantes en cualquier país, según disponibilidad horaria.</p>
-        </details>
-
-        <details class="content-reveal rounded-2xl border border-sei-deep/15 bg-white p-5 shadow-calm">
-          <summary class="cursor-pointer font-semibold text-sei-deep">¿Con qué frecuencia son las sesiones?</summary>
-          <p class="mt-3 text-slate-700">La frecuencia de las sesiones puede variar según la situación de cada persona y el momento del proceso terapéutico. Sin embargo, al iniciar suele recomendarse una frecuencia semanal o quincenal. Esto permite dar continuidad al proceso, comprender mejor lo que está ocurriendo y trabajar de forma más consistente en los objetivos terapéuticos. A medida que el proceso avanza, la frecuencia puede ajustarse según las necesidades de cada persona.</p>
-        </details>
-
-        <details class="content-reveal rounded-2xl border border-sei-deep/15 bg-white p-5 shadow-calm">
-          <summary class="cursor-pointer font-semibold text-sei-deep">¿Qué ocurre en la primera sesión?</summary>
-          <p class="mt-3 text-slate-700">La primera sesión es un espacio para empezar a conocernos y comprender qué te está llevando a buscar acompañamiento terapéutico en este momento.<br><br>Hablaremos sobre tu motivo de consulta, el contexto en el que está ocurriendo y los aspectos que consideras importantes abordar. También exploraremos qué te gustaría trabajar o comprender mejor durante el proceso.<br><br>Este primer encuentro no busca resolver todo inmediatamente, sino comenzar a entender lo que está pasando y establecer una base clara para el trabajo terapéutico. También es un espacio para que puedas conocer mi forma de trabajar y decidir si te sientes cómodo iniciando este proceso.</p>
-        </details>
-
-        <details class="content-reveal rounded-2xl border border-sei-deep/15 bg-white p-5 shadow-calm">
-          <summary class="cursor-pointer font-semibold text-sei-deep">¿Cuánto dura un proceso terapéutico?</summary>
-          <p class="mt-3 text-slate-700">Depende del caso. Se establecen objetivos observables y se revisan periódicamente para evitar procesos indefinidos.</p>
-        </details>
-
-        <details class="content-reveal rounded-2xl border border-sei-deep/15 bg-white p-5 shadow-calm">
-          <summary class="cursor-pointer font-semibold text-sei-deep">¿La terapia incluye tareas entre sesiones?</summary>
-          <p class="mt-3 text-slate-700">Sí. Se proponen ejercicios breves y conductuales para transferir el trabajo terapéutico a la vida diaria.</p>
-        </details>
-
-        <details class="content-reveal rounded-2xl border border-sei-deep/15 bg-white p-5 shadow-calm">
-          <summary class="cursor-pointer font-semibold text-sei-deep">¿Trabajas con diagnóstico o solo con síntomas?</summary>
-          <p class="mt-3 text-slate-700">Se puede trabajar con o sin diagnóstico formal. El foco principal está en procesos que mantienen el malestar.</p>
-        </details>
-
-        <details class="content-reveal rounded-2xl border border-sei-deep/15 bg-white p-5 shadow-calm">
-          <summary class="cursor-pointer font-semibold text-sei-deep">¿Atiendes crisis o urgencias?</summary>
-          <p class="mt-3 text-slate-700">No es un servicio de urgencias. Si hay riesgo inmediato para tu seguridad, debes contactar servicios de emergencia locales.</p>
-        </details>
-
-        <details class="content-reveal rounded-2xl border border-sei-deep/15 bg-white p-5 shadow-calm">
-          <summary class="cursor-pointer font-semibold text-sei-deep">¿Cómo puedo agendar una sesión?</summary>
-          <p class="mt-3 text-slate-700">Puedes agendar tu sesión directamente desde esta página.<br><br>Actualmente existen dos opciones disponibles:<br><br>• Consulta privada: puedes reservar una sesión directamente conmigo utilizando el sistema de agenda disponible en la página.<br><br>• Agenda a través de Selia: también puedes reservar tu sesión mediante la plataforma Selia, donde se gestiona el proceso completo de reserva y pago.<br><br>Solo debes seleccionar la opción que prefieras y hacer clic en el botón de agendar.</p>
-        </details>
-      </div>
-    </section>
-    <section id="agendar-sesion" class="mx-auto w-full max-w-6xl px-6 py-16">
-      <div class="content-reveal mb-8 max-w-3xl">
-        <h2 class="font-display text-3xl font-semibold text-sei-deep md:text-4xl">Agendar una sesión</h2>
-        <p class="mt-3 text-lg leading-relaxed text-slate-700">
-          Si estás considerando iniciar un proceso terapéutico, puedes agendar una sesión de dos maneras.
+      <div class="rounded-2xl bg-slate-100 p-6">
+        <h3 class="font-display text-xl font-semibold text-sei-deep">Este espacio no es adecuado si</h3>
+        <ul class="mt-4 space-y-3 text-slate-700">
+          <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-slate-500"></span><span>Buscas frases motivacionales o consejos de coaching.</span></li>
+          <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-slate-500"></span><span>Necesitas atención psiquiátrica inmediata o de urgencia.</span></li>
+          <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-slate-500"></span><span>Esperas resultados rápidos sin trabajo sostenido entre sesiones.</span></li>
+        </ul>
+        <p class="mt-5 rounded-xl bg-white px-4 py-3 text-sm text-slate-600">
+          Si estás en una situación de riesgo inmediato para tu seguridad, contacta los servicios de emergencia de tu país. En Colombia, Línea 123.
         </p>
       </div>
+    </div>
+  </div>
+</section>
 
-      <div class="grid gap-6 md:grid-cols-2">
-        <article class="content-reveal rounded-3xl border border-sei-deep/15 bg-white p-7 shadow-calm">
-          <h3 class="font-display text-2xl font-semibold text-sei-deep">Consulta privada</h3>
-          <p class="mt-3 leading-relaxed text-slate-700">
-            Las sesiones privadas se reservan directamente a través de un sistema de agenda online.
-          </p>
-          <p class="mt-4 text-slate-700">Podrás:</p>
-          <ul class="mt-3 space-y-2 text-slate-700">
-            <li class="rounded-xl bg-sei-mist px-4 py-2">Ver los horarios disponibles.</li>
-            <li class="rounded-xl bg-sei-mist px-4 py-2">Seleccionar el espacio que prefieras.</li>
-            <li class="rounded-xl bg-sei-mist px-4 py-2">Realizar el pago de la sesión para confirmar la reserva.</li>
-          </ul>
-          <p class="mt-4 leading-relaxed text-slate-700">
-            Una vez realizado el pago, recibirás la confirmación de la cita junto con los detalles de la sesión.
-          </p>
-          <a href="#contacto" class="mt-6 inline-flex rounded-full bg-sei-deep px-6 py-3 text-sm font-semibold text-white shadow-calm transition hover:bg-sei-teal">
-            Agendar sesión privada
-          </a>
-        </article>
+<!-- ENFOQUE CLÍNICO + FILOSOFÍA FUSIONADA -->
+<section id="enfoque" class="mx-auto w-full max-w-6xl px-6 py-16">
+  <div class="content-reveal rounded-[2rem] border border-sei-deep/15 bg-white p-8 shadow-calm md:p-12">
+    <h2 class="font-display text-3xl font-semibold text-sei-deep md:text-4xl">Enfoque clínico</h2>
+    <p class="mt-4 max-w-3xl text-lg leading-relaxed text-slate-700">
+      Trabajo desde las terapias contextuales o de tercera generación — ACT, DBT y Mindfulness — integradas con análisis funcional de la conducta y trabajo metacognitivo sobre rumiación y autocrítica.
+    </p>
+    <p class="mt-4 max-w-3xl leading-relaxed text-slate-700">
+      El principio central es que el sufrimiento psicológico rara vez se explica solo por el evento que lo dispara. Se sostiene por un bucle que se mantiene activo en el tiempo.
+    </p>
 
-        <article class="content-reveal rounded-3xl border border-sei-deep/15 bg-white p-7 shadow-calm">
-          <h3 class="font-display text-2xl font-semibold text-sei-deep">Consulta a través de Selia</h3>
-          <p class="mt-3 leading-relaxed text-slate-700">
-            También puedes reservar una sesión a través de la plataforma Selia.
-          </p>
-          <p class="mt-4 leading-relaxed text-slate-700">
-            En este caso, la plataforma se encarga del proceso completo de reserva, pagos y gestión de la sesión.
-          </p>
-          <div class="mt-5 max-w-sm rounded-2xl border border-sei-deep/15 bg-sei-mist/50 p-4 shadow-sm" aria-hidden="true">
-            <div class="flex items-start gap-3">
-              <div class="h-12 w-12 shrink-0 rounded-xl bg-gradient-to-br from-sei-deep/20 to-sei-teal/25"></div>
-              <div class="min-w-0">
-                <p class="truncate text-sm font-semibold text-sei-deep">Carlos Rodríguez</p>
-                <p class="text-xs text-slate-600">Psicología online en Selia</p>
-                <p class="mt-1 text-xs text-slate-600">Perfil verificado • Sesiones virtuales</p>
-              </div>
-            </div>
-            <div class="mt-3 grid grid-cols-3 gap-2 text-xs text-slate-700">
-              <span class="rounded-lg bg-white px-2 py-1 text-center">6 años</span>
-              <span class="rounded-lg bg-white px-2 py-1 text-center">⭐ 4.9</span>
-              <span class="rounded-lg bg-white px-2 py-1 text-center">+1000 citas</span>
-            </div>
-          </div>
-          <p class="mt-4 text-sm text-slate-700">⭐ 4.9 de calificación · +1000 citas realizadas</p>
-          <a href="https://app.selia.co/specialists/d95fc214-ed07-4fa3-9ee0-ad0ab6cf087b?utm_source=specialist-app&utm_medium=specialists&utm_campaign=specialist-referral" target="_blank" rel="noopener noreferrer" class="mt-6 inline-flex rounded-full bg-sei-deep px-6 py-3 text-sm font-semibold text-white shadow-calm transition hover:bg-sei-teal">
-            Agendar sesión en Selia
-          </a>
-        </article>
+    <div class="mt-8">
+      <p class="text-sm font-semibold uppercase tracking-[0.18em] text-sei-teal">Bucle de mantenimiento</p>
+      <div class="mt-4 flex flex-col items-center gap-3 md:flex-row md:justify-between md:gap-2" aria-label="Diagrama del bucle que sostiene el malestar">
+        <div class="w-full rounded-2xl border border-sei-deep/10 bg-sei-mist px-4 py-3 text-center font-medium text-sei-deep md:w-auto">Disparador</div>
+        <div class="text-sei-teal" aria-hidden="true">→</div>
+        <div class="w-full rounded-2xl border border-sei-deep/10 bg-sei-mist px-4 py-3 text-center font-medium text-sei-deep md:w-auto">Pensamiento</div>
+        <div class="text-sei-teal" aria-hidden="true">→</div>
+        <div class="w-full rounded-2xl border border-sei-deep/10 bg-sei-mist px-4 py-3 text-center font-medium text-sei-deep md:w-auto">Emoción</div>
+        <div class="text-sei-teal" aria-hidden="true">→</div>
+        <div class="w-full rounded-2xl border border-sei-deep/10 bg-sei-mist px-4 py-3 text-center font-medium text-sei-deep md:w-auto">Conducta</div>
+        <div class="text-sei-teal" aria-hidden="true">→</div>
+        <div class="w-full rounded-2xl border border-sei-deep/10 bg-sei-mist px-4 py-3 text-center font-medium text-sei-deep md:w-auto">Consecuencia</div>
       </div>
+    </div>
 
-      <article class="content-reveal mt-6 rounded-3xl border border-sei-deep/15 bg-white p-7 shadow-calm">
-        <h3 class="font-display text-2xl font-semibold text-sei-deep">Política de reserva</h3>
+    <!-- Filosofía, integrada aquí -->
+    <div class="mt-10 rounded-2xl bg-gradient-to-br from-sei-deep to-sei-teal p-8 text-white md:p-10">
+      <h3 class="font-display text-2xl font-semibold">Qué define este proceso</h3>
+      <ul class="mt-5 grid gap-3 text-white/90 md:grid-cols-3">
+        <li class="rounded-xl border border-white/20 bg-white/5 px-4 py-3">No buscamos eliminar el dolor humano.</li>
+        <li class="rounded-xl border border-white/20 bg-white/5 px-4 py-3">Buscamos responder con claridad, no en piloto automático.</li>
+        <li class="rounded-xl border border-white/20 bg-white/5 px-4 py-3">Medimos avances en conducta, no solo en intención.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CÓMO TRABAJAMOS - SECCIÓN UNIFICADA S-E-I + ETAPAS -->
+<section id="proceso" class="mx-auto w-full max-w-6xl px-6 py-16">
+  <div class="content-reveal rounded-[2rem] border border-sei-deep/15 bg-white p-8 shadow-calm md:p-12">
+    <h2 class="font-display text-3xl font-semibold text-sei-deep md:text-4xl">Cómo trabajamos</h2>
+    <p class="mt-4 max-w-3xl text-lg leading-relaxed text-slate-700">
+      El proceso terapéutico se organiza en tres movimientos que dan nombre a la práctica: <span class="font-semibold text-sei-deep">S</span> — Autoconciencia, <span class="font-semibold text-sei-deep">E</span> — Claridad emocional, <span class="font-semibold text-sei-deep">I</span> — Intención. No son pasos rígidos: son tres dimensiones que se profundizan en paralelo a lo largo del proceso.
+    </p>
+
+    <!-- Movimiento S -->
+    <div class="mt-12">
+      <div class="flex items-baseline gap-4">
+        <span class="font-display text-6xl font-semibold text-sei-aqua">S</span>
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-[0.18em] text-sei-teal">Primer movimiento</p>
+          <h3 class="font-display text-2xl font-semibold text-sei-deep">Autoconciencia</h3>
+        </div>
+      </div>
+      <p class="mt-4 max-w-3xl leading-relaxed text-slate-700">
+        Las primeras sesiones construyen un espacio clínico donde sea posible mirar con precisión lo que está ocurriendo. Se mapean patrones de rumiación, autocrítica y evitación en situaciones concretas, y se empieza a identificar qué dispara qué.
+      </p>
+      <div class="mt-5 grid gap-4 md:grid-cols-2">
+        <div class="rounded-2xl bg-sei-mist/60 p-5">
+          <p class="text-sm font-semibold text-sei-deep">Construir la base de trabajo</p>
+          <p class="mt-2 text-slate-700">Establecer un vínculo clínico claro donde sea posible hablar sin pactos de apariencia.</p>
+        </div>
+        <div class="rounded-2xl bg-sei-mist/60 p-5">
+          <p class="text-sm font-semibold text-sei-deep">Mapear la situación actual</p>
+          <p class="mt-2 text-slate-700">Entender qué ocurre, qué lo dispara, qué se repite y qué no has podido mover.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Movimiento E -->
+    <div class="mt-12">
+      <div class="flex items-baseline gap-4">
+        <span class="font-display text-6xl font-semibold text-sei-aqua">E</span>
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-[0.18em] text-sei-teal">Segundo movimiento</p>
+          <h3 class="font-display text-2xl font-semibold text-sei-deep">Claridad emocional</h3>
+        </div>
+      </div>
+      <p class="mt-4 max-w-3xl leading-relaxed text-slate-700">
+        Con la situación mapeada, se identifica cómo se sostiene el malestar. Se diferencia interpretación, emoción y necesidad para reducir la confusión interna y las decisiones impulsivas. El objetivo no es eliminar emociones difíciles, sino desarrollar una relación distinta con ellas.
+      </p>
+      <div class="mt-5 grid gap-4 md:grid-cols-2">
+        <div class="rounded-2xl bg-sei-mist/60 p-5">
+          <p class="text-sm font-semibold text-sei-deep">Identificar procesos que mantienen el malestar</p>
+          <p class="mt-2 text-slate-700">Rumiación, evitación experiencial, autocrítica, patrones relacionales repetitivos.</p>
+        </div>
+        <div class="rounded-2xl bg-sei-mist/60 p-5">
+          <p class="text-sm font-semibold text-sei-deep">Desarrollar claridad psicológica</p>
+          <p class="mt-2 text-slate-700">Diferenciar pensamiento de realidad, ampliar la capacidad de responder con conciencia.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Movimiento I -->
+    <div class="mt-12">
+      <div class="flex items-baseline gap-4">
+        <span class="font-display text-6xl font-semibold text-sei-aqua">I</span>
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-[0.18em] text-sei-teal">Tercer movimiento</p>
+          <h3 class="font-display text-2xl font-semibold text-sei-deep">Intención</h3>
+        </div>
+      </div>
+      <p class="mt-4 max-w-3xl leading-relaxed text-slate-700">
+        Comprender no alcanza. Se diseñan acciones concretas alineadas con valores — pequeños experimentos conductuales, nuevas formas de responder en situaciones difíciles — y se revisan sus resultados sesión a sesión. El cambio psicológico ocurre cuando comprensión y acción empiezan a integrarse.
+      </p>
+    </div>
+
+    <p class="mt-12 rounded-2xl border border-sei-deep/10 bg-white px-6 py-4 text-center italic text-slate-700">
+      Un proceso terapéutico sólido no separa estos tres movimientos. Los integra.
+    </p>
+  </div>
+</section>
+
+<!-- QUÉ ESPERAR EN EL PROCESO (reemplazo de testimonios) -->
+<section id="expectativas" class="mx-auto w-full max-w-6xl px-6 py-16">
+  <div class="content-reveal rounded-[2rem] border border-sei-deep/10 bg-slate-50 p-8 md:p-12">
+    <div class="max-w-3xl">
+      <h2 class="font-display text-3xl font-semibold text-sei-deep md:text-4xl">Qué esperar en el proceso</h2>
+      <p class="mt-4 text-lg leading-relaxed text-slate-700">
+        Entrar a un proceso terapéutico de este tipo tiene características específicas que conviene anticipar. No es un espacio genérico de desahogo ni una serie de técnicas rápidas. Es un trabajo clínico estructurado con momentos predecibles.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-2">
+      <article class="rounded-2xl border border-sei-deep/10 bg-white p-6 shadow-calm">
+        <h3 class="font-display text-lg font-semibold text-sei-deep">Al principio puede sentirse incómodo</h3>
         <p class="mt-3 leading-relaxed text-slate-700">
-          Para confirmar una sesión es necesario realizar el pago al momento de la reserva.
-        </p>
-        <p class="mt-3 leading-relaxed text-slate-700">
-          Esto permite garantizar el espacio en la agenda y mantener una organización adecuada de las sesiones.
-        </p>
-        <p class="mt-3 leading-relaxed text-slate-700">
-          Si necesitas reprogramar una sesión, se recomienda hacerlo con al menos 24 horas de anticipación.
+          Las primeras sesiones suelen abrir más preguntas que respuestas. Mirar con precisión lo que normalmente se evita puede generar malestar inicial. No es un signo de que algo esté mal: es parte esperable del proceso.
         </p>
       </article>
-    </section>
-    <section id="contacto" class="mx-auto w-full max-w-6xl px-6 pb-24 pt-16">
-      <div class="content-reveal rounded-[2rem] border border-sei-deep/15 bg-white p-8 text-center shadow-calm md:p-12">
-        <h2 class="font-display text-3xl font-semibold text-sei-deep md:text-4xl">Agenda una consulta</h2>
-        <p class="mx-auto mt-4 max-w-2xl text-lg text-slate-700">
-          Si deseas iniciar tu proceso terapéutico, puedes reservar tu sesión utilizando cualquiera de las siguientes opciones.
-        </p>
 
-        <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
-          <a href="#agendar-sesion" class="rounded-full bg-sei-deep px-8 py-3 text-sm font-semibold text-white shadow-calm transition hover:bg-sei-teal" aria-label="Agendar consulta privada">Agendar consulta privada</a>
-          <a href="https://app.selia.co/specialists/d95fc214-ed07-4fa3-9ee0-ad0ab6cf087b?utm_source=specialist-app&utm_medium=specialists&utm_campaign=specialist-referral" target="_blank" rel="noopener noreferrer" class="rounded-full border border-sei-deep/30 bg-white px-8 py-3 text-sm font-semibold text-sei-deep transition hover:border-sei-deep hover:bg-sei-mist" aria-label="Agendar a través de Selia">Agendar a través de Selia</a>
+      <article class="rounded-2xl border border-sei-deep/10 bg-white p-6 shadow-calm">
+        <h3 class="font-display text-lg font-semibold text-sei-deep">No se trabaja solo con la conversación</h3>
+        <p class="mt-3 leading-relaxed text-slate-700">
+          Entre sesiones se proponen ejercicios breves: observación de patrones, registros, pequeños experimentos conductuales. El trabajo clínico se sostiene en la vida cotidiana, no solo en el espacio de la sesión.
+        </p>
+      </article>
+
+      <article class="rounded-2xl border border-sei-deep/10 bg-white p-6 shadow-calm">
+        <h3 class="font-display text-lg font-semibold text-sei-deep">El avance no siempre es lineal</h3>
+        <p class="mt-3 leading-relaxed text-slate-700">
+          Habrá semanas con claridad y otras donde el mismo tema vuelve con otra forma. Esa no-linealidad no es retroceso: es la manera en la que se consolidan los cambios reales.
+        </p>
+      </article>
+
+      <article class="rounded-2xl border border-sei-deep/10 bg-white p-6 shadow-calm">
+        <h3 class="font-display text-lg font-semibold text-sei-deep">Los objetivos son observables</h3>
+        <p class="mt-3 leading-relaxed text-slate-700">
+          Se establecen criterios concretos de avance — qué se espera que cambie, cómo se va a notar — y se revisan periódicamente. Esto evita procesos indefinidos que se sostienen por inercia.
+        </p>
+      </article>
+    </div>
+
+    <p class="mt-8 max-w-3xl text-slate-700">
+      La primera sesión no busca resolver nada inmediatamente. Es un espacio para que puedas explorar qué está ocurriendo y decidir, con información clara, si este enfoque te encaja.
+    </p>
+  </div>
+</section>
+
+<!-- SOBRE EL PSICÓLOGO (unificado) -->
+<section id="psicologo" class="mx-auto w-full max-w-6xl px-6 py-16">
+  <div class="content-reveal grid gap-8 rounded-[2rem] border border-slate-800/70 bg-slate-900 p-8 text-white shadow-calm md:grid-cols-[0.9fr_1.1fr] md:p-12">
+    <article>
+      <div class="flex items-center gap-3">
+        <svg class="h-10 w-10 text-sei-aqua" aria-hidden="true"><use href="#sei-logo" /></svg>
+        <p class="text-sm font-semibold uppercase tracking-[0.16em] text-sei-aqua">Sobre el psicólogo</p>
+      </div>
+      <h2 class="mt-5 font-display text-3xl font-semibold text-white">Carlos Rodríguez</h2>
+      <p class="mt-2 text-lg text-white/90">Psicólogo clínico</p>
+      <p class="mt-6 leading-relaxed text-white/85">
+        Trabajo principalmente con adultos que funcionan en su vida cotidiana pero cargan un malestar interno persistente — rumiación, autocrítica, ansiedad, patrones que se repiten — y que han intentado resolverlo por otras vías sin lograr cambios reales.
+      </p>
+      <p class="mt-4 leading-relaxed text-white/85">
+        Mi trabajo no se centra solo en hablar de los problemas, sino en comprender los procesos psicológicos que los sostienen y diseñar acciones concretas para modificarlos.
+      </p>
+
+      <div class="mt-8 space-y-2 border-l-2 border-sei-aqua/60 pl-4">
+        <p class="text-sm font-semibold text-white">Formación</p>
+        <p class="text-white/90">Máster en Terapias de Tercera Generación — Universidad Internacional de Valencia (VIU)</p>
+        <p class="text-white/90">Psicólogo — Universidad CES</p>
+      </div>
+    </article>
+
+    <article>
+      <h3 class="font-display text-2xl font-semibold text-white">Foco de intervención</h3>
+      <ul class="mt-4 space-y-3 text-white/90">
+        <li class="rounded-xl bg-slate-800 px-4 py-3">Análisis funcional de patrones que sostienen el malestar.</li>
+        <li class="rounded-xl bg-slate-800 px-4 py-3">Entrenamiento en flexibilidad psicológica y regulación emocional.</li>
+        <li class="rounded-xl bg-slate-800 px-4 py-3">Trabajo metacognitivo sobre rumiación, autocrítica y narrativas de identidad.</li>
+        <li class="rounded-xl bg-slate-800 px-4 py-3">Diseño de acciones observables, realistas y alineadas con valores.</li>
+      </ul>
+
+      <div class="mt-6 rounded-2xl border border-white/15 bg-white/5 p-5">
+        <p class="text-sm font-semibold text-sei-aqua">Modalidad</p>
+        <p class="mt-2 text-white/90">Atención online. Sesiones individuales en español.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- AGENDAR -->
+<section id="agendar" class="mx-auto w-full max-w-6xl px-6 py-16">
+  <div class="content-reveal mb-8 max-w-3xl">
+    <h2 class="font-display text-3xl font-semibold text-sei-deep md:text-4xl">Agendar una sesión</h2>
+    <p class="mt-3 text-lg leading-relaxed text-slate-700">
+      Hay dos vías para reservar. Ambas llevan al mismo espacio clínico; cambia solo la gestión administrativa.
+    </p>
+  </div>
+
+  <div class="grid gap-6 md:grid-cols-2">
+    <article class="rounded-3xl border border-sei-deep/15 bg-white p-7 shadow-calm">
+      <h3 class="font-display text-2xl font-semibold text-sei-deep">Consulta privada</h3>
+      <p class="mt-3 leading-relaxed text-slate-700">
+        Reserva directamente a través del sistema de agenda online.
+      </p>
+      <ul class="mt-5 space-y-2 text-slate-700">
+        <li class="rounded-xl bg-sei-mist px-4 py-2">Ver horarios disponibles</li>
+        <li class="rounded-xl bg-sei-mist px-4 py-2">Seleccionar el espacio</li>
+        <li class="rounded-xl bg-sei-mist px-4 py-2">Confirmar con pago online</li>
+      </ul>
+      <p class="mt-5 text-sm text-slate-600">
+        Una vez realizado el pago, recibirás la confirmación de la cita.
+      </p>
+      <a href="#contacto" class="mt-6 inline-flex rounded-full bg-sei-deep px-6 py-3 text-sm font-semibold text-white shadow-calm transition hover:bg-sei-teal">
+        Agendar sesión privada
+      </a>
+    </article>
+
+    <article class="rounded-3xl border border-sei-deep/15 bg-white p-7 shadow-calm">
+      <h3 class="font-display text-2xl font-semibold text-sei-deep">Consulta a través de Selia</h3>
+      <p class="mt-3 leading-relaxed text-slate-700">
+        Selia gestiona la reserva, el pago y la videollamada desde su plataforma.
+      </p>
+
+      <div class="mt-5 max-w-sm rounded-2xl border border-sei-deep/15 bg-sei-mist/50 p-4 shadow-sm">
+        <div class="flex items-start gap-3">
+          <div class="h-12 w-12 shrink-0 rounded-xl bg-gradient-to-br from-sei-deep/20 to-sei-teal/25"></div>
+          <div class="min-w-0">
+            <p class="truncate text-sm font-semibold text-sei-deep">Carlos Rodríguez</p>
+            <p class="text-xs text-slate-600">Psicología online en Selia</p>
+            <p class="mt-1 text-xs text-slate-600">Perfil verificado · Sesiones virtuales</p>
+          </div>
+        </div>
+        <div class="mt-3 grid grid-cols-3 gap-2 text-xs text-slate-700">
+          <span class="rounded-lg bg-white px-2 py-1 text-center">6 años</span>
+          <span class="rounded-lg bg-white px-2 py-1 text-center">⭐ 4.9</span>
+          <span class="rounded-lg bg-white px-2 py-1 text-center">+1000 citas</span>
         </div>
       </div>
-    </section>
-  </main>
 
-  <footer class="border-t border-sei-deep/10 bg-white/80">
-    <div class="mx-auto flex w-full max-w-6xl flex-col items-start justify-between gap-2 px-6 py-6 text-sm text-slate-600 md:flex-row md:items-center">
-      <p>SEI · Autoconciencia, Claridad emocional, Intención</p>
-      <p>Carlos Rodríguez · Psicólogo clínico · Atención online para hispanohablantes</p>
+      <a href="https://app.selia.co/specialists/d95fc214-ed07-4fa3-9ee0-ad0ab6cf087b?utm_source=specialist-app&utm_medium=specialists&utm_campaign=specialist-referral" target="_blank" rel="noopener noreferrer" class="mt-6 inline-flex rounded-full bg-sei-deep px-6 py-3 text-sm font-semibold text-white shadow-calm transition hover:bg-sei-teal">
+        Agendar sesión en Selia
+      </a>
+    </article>
+  </div>
+
+  <article class="mt-6 rounded-3xl border border-sei-deep/15 bg-white p-7 shadow-calm">
+    <h3 class="font-display text-xl font-semibold text-sei-deep">Política de reserva</h3>
+    <p class="mt-3 leading-relaxed text-slate-700">
+      La confirmación de la sesión requiere pago al momento de reservar. Esto permite garantizar el espacio en agenda. Las reprogramaciones se solicitan con al menos 24 horas de anticipación.
+    </p>
+  </article>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="mx-auto w-full max-w-6xl px-6 py-16">
+  <div class="content-reveal mb-8 max-w-3xl">
+    <h2 class="font-display text-3xl font-semibold text-sei-deep md:text-4xl">Preguntas frecuentes</h2>
+    <p class="mt-3 text-lg text-slate-700">Respuestas claras para que decidas con información.</p>
+  </div>
+
+  <div class="space-y-4">
+    <details class="rounded-2xl border border-sei-deep/15 bg-white p-5 shadow-calm">
+      <summary class="cursor-pointer font-semibold text-sei-deep">¿Cómo sé si este enfoque es para mí?</summary>
+      <p class="mt-3 leading-relaxed text-slate-700">Este tipo de trabajo suele encajar con personas que ya han intentado resolver su malestar por otras vías — leer, reflexionar, aconsejarse — y sienten que entienden mucho pero no logran mover lo central. Si buscas un trabajo clínico estructurado, con análisis funcional y acciones concretas entre sesiones, este enfoque puede serte útil. Si esperas consejos rápidos o desahogo sin dirección, probablemente no.</p>
+    </details>
+
+    <details class="rounded-2xl border border-sei-deep/15 bg-white p-5 shadow-calm">
+      <summary class="cursor-pointer font-semibold text-sei-deep">¿En qué se diferencia de otras terapias?</summary>
+      <p class="mt-3 leading-relaxed text-slate-700">Las terapias contextuales o de tercera generación no se centran en eliminar pensamientos o emociones difíciles, sino en cambiar la relación que tienes con ellos y ampliar tu repertorio de respuestas. Se trabaja con análisis funcional — qué función cumple un pensamiento o conducta en tu vida — más que con categorías diagnósticas rígidas. El foco está en procesos (rumiación, evitación, fusión cognitiva) que aparecen en múltiples problemáticas.</p>
+    </details>
+
+    <details class="rounded-2xl border border-sei-deep/15 bg-white p-5 shadow-calm">
+      <summary class="cursor-pointer font-semibold text-sei-deep">¿Qué ocurre en la primera sesión?</summary>
+      <p class="mt-3 leading-relaxed text-slate-700">La primera sesión es un espacio para entender qué te está llevando a buscar acompañamiento en este momento, el contexto en que está ocurriendo y qué aspectos consideras importantes abordar. No busca resolver todo inmediatamente: busca establecer una base clara de trabajo y que puedas conocer mi forma de operar antes de decidir si iniciar el proceso.</p>
+    </details>
+
+    <details class="rounded-2xl border border-sei-deep/15 bg-white p-5 shadow-calm">
+      <summary class="cursor-pointer font-semibold text-sei-deep">¿Con qué frecuencia son las sesiones?</summary>
+      <p class="mt-3 leading-relaxed text-slate-700">Al iniciar se recomienda frecuencia semanal o quincenal. Esto permite dar continuidad al proceso y trabajar de forma consistente sobre los objetivos terapéuticos. A medida que el proceso avanza, la frecuencia se ajusta.</p>
+    </details>
+
+    <details class="rounded-2xl border border-sei-deep/15 bg-white p-5 shadow-calm">
+      <summary class="cursor-pointer font-semibold text-sei-deep">¿Cuánto dura un proceso terapéutico?</summary>
+      <p class="mt-3 leading-relaxed text-slate-700">Depende de cada caso. Se establecen objetivos observables y se revisan periódicamente, para evitar procesos indefinidos que se sostienen por inercia. Algunos procesos son breves y focalizados; otros requieren tiempo para consolidar cambios.</p>
+    </details>
+
+    <details class="rounded-2xl border border-sei-deep/15 bg-white p-5 shadow-calm">
+      <summary class="cursor-pointer font-semibold text-sei-deep">¿La terapia incluye tareas entre sesiones?</summary>
+      <p class="mt-3 leading-relaxed text-slate-700">Sí. Se proponen ejercicios breves — observación, registros, pequeños experimentos conductuales — para transferir el trabajo clínico a la vida cotidiana. El cambio no se consolida solo en sesión.</p>
+    </details>
+
+    <details class="rounded-2xl border border-sei-deep/15 bg-white p-5 shadow-calm">
+      <summary class="cursor-pointer font-semibold text-sei-deep">¿Trabajas con diagnóstico o solo con síntomas?</summary>
+      <p class="mt-3 leading-relaxed text-slate-700">Se puede trabajar con o sin diagnóstico formal. El foco principal está en los procesos que mantienen el malestar, no en la etiqueta diagnóstica.</p>
+    </details>
+
+    <details class="rounded-2xl border border-sei-deep/15 bg-white p-5 shadow-calm">
+      <summary class="cursor-pointer font-semibold text-sei-deep">¿Desde dónde puedo consultar?</summary>
+      <p class="mt-3 leading-relaxed text-slate-700">Desde cualquier país de habla hispana con conexión estable a internet. La atención es online y los horarios se coordinan según disponibilidad.</p>
+    </details>
+
+    <details class="rounded-2xl border border-sei-deep/15 bg-white p-5 shadow-calm">
+      <summary class="cursor-pointer font-semibold text-sei-deep">¿Atiendes crisis o urgencias?</summary>
+      <p class="mt-3 leading-relaxed text-slate-700">No es un servicio de urgencias. Si hay riesgo inmediato para tu seguridad, contacta los servicios de emergencia locales. En Colombia, Línea 123.</p>
+    </details>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section id="contacto" class="mx-auto w-full max-w-6xl px-6 pb-24 pt-16">
+  <div class="content-reveal rounded-[2rem] border border-sei-deep/15 bg-white p-8 text-center shadow-calm md:p-12">
+    <svg class="mx-auto h-12 w-12" aria-hidden="true"><use href="#sei-logo" /></svg>
+    <h2 class="mt-5 font-display text-3xl font-semibold text-sei-deep md:text-4xl">Iniciar un proceso</h2>
+    <p class="mx-auto mt-4 max-w-2xl text-lg text-slate-700">
+      Si crees que este enfoque puede encajar con lo que estás atravesando, la primera sesión es el espacio para explorarlo con información clara.
+    </p>
+    <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+      <a href="#agendar" class="rounded-full bg-sei-deep px-8 py-3 text-sm font-semibold text-white shadow-calm transition hover:bg-sei-teal">Agendar consulta privada</a>
+      <a href="https://app.selia.co/specialists/d95fc214-ed07-4fa3-9ee0-ad0ab6cf087b?utm_source=specialist-app&utm_medium=specialists&utm_campaign=specialist-referral" target="_blank" rel="noopener noreferrer" class="rounded-full border border-sei-deep/30 bg-white px-8 py-3 text-sm font-semibold text-sei-deep transition hover:border-sei-deep hover:bg-sei-mist">Agendar a través de Selia</a>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <script id="datos-marca" type="application/json">
-    {
-      "marca": "SEI",
-      "acronimo": {
-        "S": "Autoconciencia",
-        "E": "Claridad emocional",
-        "I": "Intención"
+</main>
+
+<footer class="border-t border-sei-deep/10 bg-white/80">
+  <div class="mx-auto flex w-full max-w-6xl flex-col items-start justify-between gap-3 px-6 py-8 text-sm text-slate-600 md:flex-row md:items-center">
+    <div class="flex items-center gap-3">
+      <svg class="h-7 w-7" aria-hidden="true"><use href="#sei-logo" /></svg>
+      <div>
+        <p class="font-semibold text-sei-deep">SEI</p>
+        <p class="text-xs text-slate-500">Autoconciencia · Claridad · Intención</p>
+      </div>
+    </div>
+    <p>Carlos Rodríguez · Psicólogo clínico · Atención online</p>
+  </div>
+</footer>
+
+<!-- Datos estructurados de marca -->
+<script id="datos-marca" type="application/json">
+{
+  "marca": "SEI",
+  "acronimo": {
+    "S": "Autoconciencia",
+    "E": "Claridad emocional",
+    "I": "Intención"
+  },
+  "posicionamiento_clinico": [
+    "Terapias contextuales de tercera generación (ACT, DBT, Mindfulness)",
+    "Análisis funcional de la conducta",
+    "Trabajo metacognitivo sobre rumiación y autocrítica",
+    "Foco clínico en procesos psicológicos transdiagnósticos"
+  ],
+  "estilo_terapeutico": [
+    "Claro",
+    "Estructurado",
+    "Directo y compasivo",
+    "Basado en evidencia",
+    "Orientado a cambio conductual"
+  ],
+  "evita": [
+    "Escucha pasiva sin dirección",
+    "Validación emocional indefinida",
+    "Clichés motivacionales",
+    "Pseudo-coaching"
+  ],
+  "mecanismos_objetivo": [
+    "Rumiación",
+    "Autocrítica",
+    "Evitación experiencial",
+    "Desregulación emocional",
+    "Patrones relacionales",
+    "Narrativas de identidad"
+  ],
+  "principio_central": "El sufrimiento se mantiene por procesos repetitivos, no solo por eventos aislados."
+}
+</script>
+
+<!-- Schema.org para SEO local -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "SEI — Carlos Rodríguez, Psicólogo Clínico",
+  "description": "Psicoterapia online con terapias contextuales. Trabajo clínico sobre rumiación, autocrítica y patrones que se repiten.",
+  "url": "https://sei-fawn.vercel.app/",
+  "serviceType": "Psicoterapia online",
+  "availableLanguage": "Spanish",
+  "provider": {
+    "@type": "Person",
+    "name": "Carlos Rodríguez",
+    "jobTitle": "Psicólogo clínico",
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "Universidad CES" },
+      { "@type": "CollegeOrUniversity", "name": "Universidad Internacional de Valencia (VIU)" }
+    ]
+  }
+}
+</script>
+
+<script>
+(function () {
+  const elementos = document.querySelectorAll('.content-reveal');
+  const mostrar = (el) => el.classList.add('visible');
+
+  elementos.forEach((el) => {
+    if (el.closest('#inicio')) mostrar(el);
+  });
+
+  if ('IntersectionObserver' in window) {
+    const observador = new IntersectionObserver(
+      (entradas) => {
+        entradas.forEach((entrada) => {
+          if (entrada.isIntersecting) {
+            mostrar(entrada.target);
+            observador.unobserve(entrada.target);
+          }
+        });
       },
-      "posicionamiento_clinico": [
-        "Psicoterapia basada en procesos",
-        "Terapias contextuales de tercera generación (ACT, DBT, Mindfulness)",
-        "Análisis funcional de la conducta",
-        "Trabajo metacognitivo sobre rumiación y autocrítica"
-      ],
-      "estilo_terapeutico": [
-        "Claro",
-        "Estructurado",
-        "Directo y compasivo",
-        "Basado en evidencia",
-        "Orientado a cambio conductual"
-      ],
-      "evita": [
-        "Escucha pasiva sin dirección",
-        "Validación emocional indefinida",
-        "Clichés motivacionales",
-        "Pseudo-coaching"
-      ],
-      "mecanismos_objetivo": [
-        "Rumiación",
-        "Autocrítica",
-        "Evitación experiencial",
-        "Desregulación emocional",
-        "Patrones relacionales",
-        "Narrativas de identidad"
-      ],
-      "principio_central": "El sufrimiento se mantiene por procesos repetitivos, no solo por eventos aislados."
-    }
-  </script>
+      { threshold: 0.15, rootMargin: '0px 0px -10% 0px' }
+    );
+    elementos.forEach((el) => {
+      if (!el.classList.contains('visible')) observador.observe(el);
+    });
+  } else {
+    elementos.forEach(mostrar);
+  }
 
-  <script>
-    (function () {
-      const elementos = document.querySelectorAll('.content-reveal');
+  window.setTimeout(() => elementos.forEach(mostrar), 1200);
 
-      const mostrar = (el) => {
-        el.classList.add('visible');
-      };
-
-      elementos.forEach((el) => {
-        if (el.closest('#inicio')) {
-          mostrar(el);
-        }
-      });
-
-      if ('IntersectionObserver' in window) {
-        const observador = new IntersectionObserver(
-          (entradas) => {
-            entradas.forEach((entrada) => {
-              if (entrada.isIntersecting) {
-                mostrar(entrada.target);
-                observador.unobserve(entrada.target);
-              }
-            });
-          },
-          {
-            threshold: 0.15,
-            rootMargin: '0px 0px -10% 0px'
-          }
-        );
-
-        elementos.forEach((el) => {
-          if (!el.classList.contains('visible')) {
-            observador.observe(el);
-          }
-        });
-      } else {
-        elementos.forEach(mostrar);
-      }
-
-      // Fallback defensivo: evita que el contenido quede oculto si falla el observer.
-      window.setTimeout(() => {
-        elementos.forEach((el) => mostrar(el));
-      }, 1200);
-
-      document.querySelectorAll('a[href^="#"]').forEach((enlace) => {
-        enlace.addEventListener('click', (evento) => {
-          const id = enlace.getAttribute('href');
-          const objetivo = document.querySelector(id);
-          if (!objetivo) return;
-          evento.preventDefault();
-          objetivo.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        });
-      });
-    })();
-  </script>
+  document.querySelectorAll('a[href^="#"]').forEach((enlace) => {
+    enlace.addEventListener('click', (evento) => {
+      const id = enlace.getAttribute('href');
+      const objetivo = document.querySelector(id);
+      if (!objetivo) return;
+      evento.preventDefault();
+      objetivo.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+})();
+</script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
